@@ -1,0 +1,443 @@
+.body{
+    margin-left:auto;
+    margin-right:auto;
+    margin: 0px;
+    padding: 0px;
+    background: cornsilk;
+}
+
+
+/* homePage.jsx stylying */
+
+.homePage{
+    text-align: center;
+    /* height: 100%; */
+}
+
+#homePageTitle{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 5%;
+    padding-right: 20%;
+    padding-left: 20%;
+}
+
+.userContainer{
+    position: relative;
+    padding-top: 5%;
+    padding-right: 20%;
+    padding-left: 20%;
+}
+
+.createUserForm{
+    position: relative;
+    padding-top: 20px;
+    height: 50px;
+    padding-bottom: 20px;
+}
+
+#createUserInput{
+    position: absolute;
+    left: 33%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+    font-size: large;
+    width: 25%;
+    height: 30px;
+    border-radius: 20px;
+    outline: none;
+    border: 5px solid #2a9d8f ;
+}
+
+#createUserInput:focus{
+    background: #e1fffc;
+}
+
+#createUserButton{
+    position: absolute;
+    left: 62%;
+    top: 24%;
+    padding: 0;
+    border:none;
+    background-color:transparent;
+    outline:none; 
+}
+
+.displayUserForm{
+    position: relative;
+    margin-top: -2.5px;
+    height: 35px;
+
+    border-top:solid;
+    border-bottom: solid;
+}
+
+
+
+#displayUserLink{
+    position: absolute;
+    text-align: center;
+    width: 25%;
+    top:20%;
+    left: 33.5%;
+    font-family: 'Rubik', sans-serif;
+    font-size: medium;
+}
+
+#displayUserDeleteButton{
+    position: absolute;
+    top:20%;
+    left: 62%;
+    border:none;
+    background-color:transparent;
+    outline:none;
+    
+}
+
+/* budgetPage.jsx stylying */
+/* budgetPage.jsx Budget List stylying */
+
+.budgetPage{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    height: 100%;
+    /* background: cornsilk; */
+}
+
+.budgetListBox{
+    position: relative;
+    padding: 0;
+    width: 50%;
+    height: 40rem;
+    /* border: solid blue; */
+}
+
+@media screen and (max-width: 1024px) {
+    .budgetListBox {
+       width: 100%;
+    }
+ }
+
+.budgetListContainer{
+    position: relative;
+    border-radius: 10px;
+    border:2px solid #237e73;
+    margin: 5%;
+    height: 36rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+#budgetListTitle{
+    margin: 0 auto;
+    padding-top: 5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.budgetListHeaderOne{
+    position: relative;
+    text-align: center;
+    width: 90%;
+    height: 5%;
+    padding-top: 3%;
+    margin: 0 auto;
+    border-bottom: solid black;
+}
+
+#budgetListDate{
+    position: absolute;
+    margin: 0;
+    left: 0;
+    bottom: 0;
+}
+#budgetListHomeLink{
+    position: absolute;
+    margin: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.budgetListHeaderTwo{
+    position: relative;
+    text-align: center;
+    width: 90%;
+    height: 5%;
+    padding-top: 3%;
+    margin: 0 auto;
+    border-bottom: solid black;
+}
+
+#budgetListItem{
+    position: absolute;
+    margin: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#budgetListPrice{
+    position: absolute;
+    margin: 0;
+    left: 47%;
+    bottom: 0;
+}
+
+.budgetListForm{
+    position: relative;
+    /* border: solid orange; */
+    height: 70%;;
+}
+
+.budgetListCreateItem{
+    position: relative;
+    text-align: center;
+    width: 90%;
+    height: 8%;
+    padding-top: 2%;
+    margin: 0 auto;
+    margin-bottom: 2%;
+}
+
+#createItemInput{
+    position: absolute;
+    margin: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    width: 30%;
+    border-radius: 0 20px 20px 0;
+    border: 4px solid #2a9d8f ;
+    outline: none;
+}
+
+#createItemInput:focus{
+    background: #e1fffc;
+}
+
+#createItemPrice{
+    position: absolute;
+    margin: 0;
+    left: 47%;
+    bottom: 0;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    width: 30%;
+    border-radius: 0 20px 20px 0;
+    border: 4px solid #2a9d8f ;
+    outline: none;
+}
+
+#createItemPrice:focus{
+    background: #e1fffc;
+}
+
+#createItemButton{
+    position: absolute;
+    margin: 0;
+    right:  0;
+    bottom: 0;
+    border:none;
+    background-color:transparent;
+    outline:none; 
+}
+
+.budgetOrderedList{
+    position: relative;
+    width: 90%;
+    height: 80%;
+    padding: 0;
+    margin: 0 auto;
+    overflow-y: scroll;
+    /* border: 2px solid rgb(83, 223, 169); */
+}
+
+.budgetList{
+    position: relative;
+    list-style-position: inside;
+    text-align: left;
+    width: 100%;
+    height: 6%;
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 2.5%;
+    border-bottom: solid #2a9d8f ;
+}
+
+#budgetListDisplayItem{
+    position: absolute;
+    margin: 0;
+    padding-left: 1%;
+    left: 5%;
+    font-size: 1rem;
+    bottom: 0;
+}
+
+@media screen and (max-width: 512px) {
+    #budgetListDisplayItem {
+       padding-left: 3%;
+    }
+ }
+
+#budgetListDisplayPrice{
+    position: absolute;
+    font-size: 1rem;
+    margin: 0;
+    left: 47%;
+    bottom: 0;
+}
+
+#budgetListDeleteItem{
+    position: absolute;
+    margin: 0;
+    right: 1%;
+    bottom: 0;
+    border:none;
+    background-color:transparent;
+    outline:none; 
+}
+
+.budgetListHeaderThree{
+    position: absolute;
+    text-align: center;
+    width: 90%;
+    height: 7%;
+    margin: 0 4.5%;
+    bottom: 0;
+    /* border: solid purple; */
+}
+
+#budgetListTotal{
+    position: absolute;
+    margin: 0 auto;
+    padding: 0;
+    left:0;
+    top: 30%;
+}
+
+#budgetListSaveList{
+    position: absolute;
+    margin: 0 auto;
+    padding: 0;
+    right: 0;
+    border:none;
+    background-color:transparent;
+    outline:none; 
+}
+
+/* budgetPage.jsx stylying */
+/* budgetPage.jsx Budget Calendar stylying */
+
+.budgetCalendarBox{
+    position: relative;
+    width: 50%;
+    padding: 0;
+    height: 40rem;
+    /* border: solid royalblue; */
+}
+
+@media screen and (max-width: 1024px) {
+    .budgetCalendarBox {
+       width: 100%;
+    }
+ }
+
+.budgetCalendarContainer{
+    position: relative;
+    /* width: 80%; */
+    height: 36rem;
+    /* margin: 0 auto; 
+    margin-top: 5%;
+    margin-bottom: 5%; */
+    margin: 5%;
+    border-radius: 10px;
+    border:2px solid #237e73;
+    font-family: 'Rubik', sans-serif;
+}
+
+.budgetCalendarPrevNext{
+    position: relative;
+    display: block;
+    height: 2.5rem;
+    width: 100%;
+}
+
+.budgetCalendarMonth{
+    position: relative;
+    display: block;
+    padding-bottom: 2%;
+    height: 2rem;
+    font-size: 2rem;
+    font-style: bold;
+} 
+
+#budgetCalendarPrev{
+    position: absolute;
+    height: 1.5rem;
+    width: 25%;
+    font-size: 1.2rem;
+    left:10%;
+    bottom: 0;
+}
+
+#budgetCalendarNext{
+    position: absolute;
+    height: 1.5rem;
+    width: 25%;
+    font-size: 1.2rem;
+    right: 10%;
+    bottom: 0;
+}
+
+.tableRowDay{
+    height: 1rem;
+}
+
+.budgetCalendarTableRowWeek{
+    padding: 1% 0;
+    width: 14.28%;
+    border: solid #237e73;
+    border-radius: 10px;
+    background-color: rgb(83, 223, 169);
+}
+
+
+.budgetCalendarTableRowDay{
+    height: 3rem;
+    padding: 1% 0;
+    border: solid #237e73;
+    border-radius: 5px;
+    background-color:  rgb(162, 243, 212);
+}
+
+#calendarDateSet{
+    text-align: center;
+    padding: 2px 0;
+    font-size: 1.1rem;
+}
+
+#calendarTotal{
+    text-align: center;
+    padding: 2px 0;
+    font-size: 0.9rem;
+}
+
+/* SWAL */
+
+.swal-modal {
+    background-color: rgb(83, 223, 169);
+    border: 3px solid white;
+  }
+
+  .swal-text {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    color: black
+  }
+
+

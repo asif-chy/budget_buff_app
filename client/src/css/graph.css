@@ -1,0 +1,154 @@
+/* An absolutely positioned element relies on a parent with position: relative 
+to calculate where it should be placed */
+
+
+.budgetGraphBox{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+
+.graph{
+    position:relative;
+    display:flex;
+    /* margin: 0 auto; */
+    margin: 0 2.5% 2.5% 2.5%;
+    max-width: 100%;
+    /* padding: 2.5%; */
+    height: 25rem;
+    background-color:  rgb(162, 243, 212);
+    border: 2px solid #237e73;
+    font-family: 'Rubik', sans-serif;
+
+    /* border-top-right-radius: 5px; */
+    border-radius: 5px;
+}
+
+.barContainer{
+    position:relative;
+    display: flex;
+    flex-flow: row wrap;
+    width: 95%;
+    height: 100%;
+}
+
+.barDisplay{
+    position:relative;
+    width: 100%;
+    height: 90%;
+    border-left: 1.5px solid black;
+    background: whitesmoke;
+    border-radius: 0 5px 0 0;
+}
+
+.line{
+    /* position:absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    background: #6ed4c6;
+    left: 0%; */
+    position: absolute;
+    width :100%;
+    height: 0.2%;
+    background: black;
+    /* background: tomato; */
+    /* //z-index: 25; */
+    /* border-bottom: 1px solid white;
+    border-right: 1px solid white; */
+}
+
+/* The z-index property specifies the stack order of an element.
+An element with greater stack order is always in front of an element with a lower stack order.
+Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky). */
+
+.bar{
+    /* height: 5%;
+    background: tomato;
+    z-index: 25;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white; */
+    z-index: 25;
+    position:absolute;
+    /* //top: 0; */
+    bottom: 0; 
+    background-color: rgb(83, 223, 169);
+    /* background: #6ed4c6; */
+    border: 1px black solid;
+    border-radius: 5px 5px 0 0;
+}
+
+.graphDateTextDisplay{
+    position: relative;
+    height: 10%;
+    width: 100%;
+    background-color:  rgb(162, 243, 212);
+    border-radius: 0 0 5px 0;
+}
+
+.DateText{
+    position: absolute;
+    top: 10%;
+    font-size: .8rem;
+}
+@media screen and (max-width: 800px) {
+    .DateText {
+        font-size: .7rem;
+    }
+ }
+
+@media screen and (max-width: 600px) {
+    .DateText {
+        font-size: .4rem;
+    }
+ }
+
+.graphAmountTextDisplay{
+    position: relative;
+    height: 90%;
+    width: 5%;
+    background-color:  rgb(162, 243, 212);
+    border-radius: 5px 0 0 0;
+}
+
+.AmountText{
+    position: absolute;
+    font-size: .8rem;
+    width :50%;
+    right: 8%;
+}
+
+@media screen and (max-width: 800px) {
+    .AmountText {
+        font-size: .7rem;
+    }
+ }
+ 
+@media screen and (max-width: 600px) {
+    .AmountText {
+        font-size: .4rem;
+    }
+ }
+
+#dollarLabel{
+    position: absolute;
+    top:41%;
+    left: 20%;
+}
+
+@media screen and (max-width: 800px) {
+    #dollarLabel {
+        font-size: .7rem;
+    }
+ }
+ 
+@media screen and (max-width: 600px) {
+    #dollarLabel {
+        font-size: .4rem;
+    }
+ }
+
+
+
