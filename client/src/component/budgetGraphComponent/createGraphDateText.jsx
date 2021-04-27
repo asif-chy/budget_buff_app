@@ -5,17 +5,6 @@ function CreateGraphDateText(props) {
 
     console.log(props);
 
-    // {props.dateList.map((week) => (
-    //     week.map((each, index) => (
-    //         <CreateBar key={index}
-    //             barWidth={barData.barWidth}
-    //             barMaxHeight={barData.barMaxHeight}
-    //             total={each.total}
-    //             dateIndex={each.dateIndex}
-    //         />
-    //     ))
-    // ))}
-
     return (
         <div className="graphDateTextDisplay">
             {props.dateList.map((week) => (

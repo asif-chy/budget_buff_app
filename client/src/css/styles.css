@@ -431,13 +431,22 @@
 .swal-modal {
     background-color: rgb(83, 223, 169);
     border: 3px solid white;
-  }
+}
 
-  .swal-text {
-    font-family: 'Rubik', sans-serif;
-    font-size: 1rem;
-    text-align: center;
-    color: black
-  }
+.swal-text {
+   font-family: 'Rubik', sans-serif;
+   font-size: 1rem;
+   text-align: center;
+   color: black
+}
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 

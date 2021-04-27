@@ -86,9 +86,11 @@ function DisplayCalendar(props) {
         return newDates;
     }
 
+    console.log("getTotalListCalled");
+
     const fetchTotalList = async (dates, dateList, userId) => {
         try {
-            const res = await axios.get('http://localhost:9000/getTotalList', {
+            const res = await axios.get('/getTotalList', {
                 params: {
                     userId: userId,
                     dateList: dateList
@@ -111,21 +113,23 @@ function DisplayCalendar(props) {
         var totalHashMap = new Map();
 
         //console.log(dateList);
-        //console.log(totalList);
+        console.log(totalList);
         var j = 0;
         var i = 0;
         var totalValue;
         var dateString;
         var dateIndex = 0;
-
+        console.log(dateList.length + "ADDING TOTAL");
         while (i < dateList.length) {
-
-            if (j < totalList.length && dateList[i] === (totalList[j].listDate)) {
-                totalHashMap.set(dateList[i], totalList[j].listTotal);
+            //console.log(totalList[j].listTotal + "ADDING TOTAL");
+            if (j < totalList.length && totalList[j].listDate) {
+                console.log(totalList[j].listDate + "PLUS " + totalList[j].listTotal + "ADDING TOTAL");
+                totalHashMap.set(totalList[j].listDate, totalList[j].listTotal);
                 j++;
-                i++;
             } else {
-                totalHashMap.set(dateList[i], '0');
+                if (!(totalHashMap.has(dateList[i]))){
+                    totalHashMap.set(dateList[i], '0');
+                }
                 i++;
             }
         }

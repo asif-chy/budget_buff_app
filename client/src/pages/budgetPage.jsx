@@ -68,7 +68,7 @@ function BudgetPage(props) {
                         listDate: currentDate
                     }
                 })
-                const res = await axios.get('http://localhost:9000/getItemListData', {
+                const res = await axios.get('/getItemListData', {
                     params: {
                         userId: id,
                         listDate: currentDate
@@ -101,6 +101,7 @@ function BudgetPage(props) {
                     setItemList(previousValue => {
                         return {
                             ...previousValue,
+                            isSaved: false,
                             list: []
                         }
                     })
@@ -159,11 +160,12 @@ function BudgetPage(props) {
     async function handleBudgetSubmit(event) {
         event.preventDefault();
         console.log("Before Budget Save Call");
-        console.log(!itemList.isSaved);
+        console.log(itemList.isSaved);
+        console.log(itemList);
 
         if (!itemList.isSaved) {
             //const res = await 
-            axios.post('http://localhost:9000/saveItemListData', { itemList });
+            axios.post('/saveItemListData', { itemList });
 
             setItemList(previousValue => {
                 return {
@@ -174,7 +176,7 @@ function BudgetPage(props) {
 
         } else {
             console.log("update");
-            axios.put('http://localhost:9000/updateItemListData', { itemList });
+            axios.put('/updateItemListData', { itemList });
         }
     }
 

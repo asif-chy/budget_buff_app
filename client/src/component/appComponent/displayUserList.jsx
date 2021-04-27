@@ -14,7 +14,12 @@ function DisplayUserList(props) {
         props.delete(props.item._id)
         const item = props.item;
 
-        axios.delete('http://localhost:9000/delete', { data: { item } });
+        try{
+            axios.delete('/deleteUser', { data: { item } });
+            axios.delete('/deleteUserData', { data: { item } });
+        }catch{
+            console.log("Error Deleting User");
+        }
 
     }
 

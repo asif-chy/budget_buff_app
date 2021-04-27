@@ -51,7 +51,7 @@ function CreateUser(props) {
       }
     }
 
-    const res = await axios.post('http://localhost:9000/save', { user });
+    const res = await axios.post('/save', { user });
 
     // console.log(res);
     // console.log(res.data.id);

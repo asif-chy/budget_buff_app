@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 function CreateItem(props) {
+
+    console.log(props.list);
 
     const [item, setItem] = React.useState({
         itemId: "",
@@ -9,14 +12,12 @@ function CreateItem(props) {
         amount: ""
     });
 
-
-    console.log(props.list);
-
     function addItem(event) {
         const { name, value } = event.target;
 
         let nameUpperCase = value.toUpperCase();
-
+        console.log(value);
+    
         setItem(previouseValue => {
             return {
                 ...previouseValue,
@@ -50,6 +51,12 @@ function CreateItem(props) {
         let itemIdObject = null;
         let itemIdToSet = null;
 
+        console.log(item.amount + "  AMOUNT");
+        if(!item.amount || !item.itemName){
+            swal("Oops! Please enter item name and price", { button: false });
+            return false;
+        }
+
         if (listLength != 0) {
             itemIdObject = props.list[listLength - 1];
             itemIdToSet = parseInt(itemIdObject.itemId + 1);
@@ -58,22 +65,18 @@ function CreateItem(props) {
         }
 
         //console.log(itemIdToSet);
-
         setItem(previousValue => {
             return {
                 ...previousValue,
                 itemId: itemIdToSet,
             };
         })
-
-        //console.log(item);
-        //props.onAdd(item);
     }
 
     return (
         <div className="budgetListCreateItem">
             <input type="text" name="itemName" placeholder="ADD ITEM" onChange={addItem} id="createItemInput"></input>
-            <input type="text" name="amount" placeholder="ADD AMOUNT" onChange={addItem} id="createItemPrice"></input>
+            <input type="number" required="required" max="999999999" name="amount" placeholder="ADD AMOUNT" onChange={addItem} id="createItemPrice"></input>
             <button type="button" onClick={handleItemCreate} id="createItemButton"><i className="fa fa-plus fa-2x"></i></button>
         </div>
     )
